@@ -11,6 +11,10 @@ echo [!] Asegurate de tener Python instalado.
 echo.
 pause
 
+echo [*] Instalando Dependendencias [Python]:
+pip install faker 
+pip install mysql-connector
+
 :: Verificacion del Archivo .bat/cmd
 cd /d "%~dp0"
 
@@ -44,7 +48,7 @@ echo [+] Base de datos creada con exito.
 
 echo.
 echo [*] Registrando datos de ejemplo...
-python setExampleRegistry.py
+::python setExampleRegistry.py
 
 if %errorlevel% neq 0 (
     color 0c

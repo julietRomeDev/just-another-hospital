@@ -60,6 +60,7 @@ cursor.execute("DROP TABLE IF EXISTS pacientes_cobertura")
 cursor.execute("DROP TABLE IF EXISTS obras_sociales_prepagas")
 cursor.execute("DROP TABLE IF EXISTS contactos_emergencia")
 cursor.execute("DROP TABLE IF EXISTS pacientes")
+cursor.execute("DROP TABLE IF EXISTS usuarios")
 print("[*] Tablas eliminadas exitosamente...")
 
 print("[*] Creando tablas...")
@@ -517,6 +518,14 @@ cursor.execute("""
         fecha_pago DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (factura_id) REFERENCES Facturas(id)
     )
+""")
+
+print("[*] Creando tabla usuarios (Testing purposes only)")
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS usuarios (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        user varchar(100) NOT NULL,
+        password varchar(100) NOT NULL)
 """)
 
 conn.commit()
