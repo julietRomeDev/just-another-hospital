@@ -47,8 +47,9 @@ if %errorlevel% neq 0 (
 echo [+] Base de datos creada con exito.
 
 echo.
+cls
 echo [*] Registrando datos de ejemplo...
-::python setExampleRegistry.py
+python setExampleRegistry.py
 
 if %errorlevel% neq 0 (
     color 0c

@@ -58,12 +58,13 @@ include('resources/scripts/databaseQueries.php');
                         <a class="dropdown-item" href="pacientes/resultados/resultados-analisis/index.html">Resultados de Análisis</a>
                         <a class="dropdown-item" href="pacientes/gestionar-internacion/index.html">Internaciones</a>
                         <a class="dropdown-item" href="facturacion/index.html">Facturación</a>
+                        <a class="dropdown-item"href="pacientes/gestionar-turnos/index.html">Turnos</a>
                     </div>
                 </li>
 
                 <!--Dropdown Médicos-->
                 <li class="nav-item dropdown">
-                	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
+                	<a class="nav-link dropdown-toggle" href="medicos/login/login.html" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
                 		Area Médicos
                 	</a>
                 	<div class="dropdown-menu" aria-labelledby="navbarDropdownMedicos">
@@ -77,9 +78,15 @@ include('resources/scripts/databaseQueries.php');
 
     <!--Contenido Principal-->
 
+    <div id="logo">
+
+        <img id="logo" src="resources/images/serpienteMedicina.png" class="rounded-circle" style="width: 200px; height: auto;" alt="logoSerpienteMedicina">
+
+    </div>
+
+
     <div id="main-content-container">
-    	
-    			<img id="logo" src="resources/images/serpienteMedicina.png" class="rounded-circle" style="width: 200px; height: auto;" alt="logoSerpienteMedicina">
+    				
 
     			<div class="card-group">
 
@@ -87,23 +94,25 @@ include('resources/scripts/databaseQueries.php');
 				    <img class="card-img-top" src="..." alt="Card image cap">
 				    <div class="card-body">
 				      <h5 class="card-title">Hospital de Día</h5>
-				      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				      <p class="card-text">Área destinada a la atención ambulatoria integral y de baja complejidad. Brindamos seguimiento médico continuo, tratamientos clínicos programados y procedimientos diagnósticos en un entorno seguro y de pronta recuperación, optimizando los tiempos de internación.</p>
 				      <p class="card-text"><button id="btnHDD" class="btn btn-secondary">Ver Servicios de Hospital de Día</button>
 				    </div>
 				  </div>
+
 				  <div class="card">
 				    <img class="card-img-top" src="..." alt="Card image cap">
 				    <div class="card-body">
 				      <h5 class="card-title">Salud Mental</h5>
-				      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+				      <p class="card-text">Servicio interdisciplinario enfocado en el bienestar psicológico y psiquiátrico de nuestros pacientes. Ofrecemos contención, evaluación clínica, psicoterapia y seguimiento personalizado tanto para internación como para consultas ambulatorias.</p>
 				      <p class="card-text"><button id="btnSM" class="btn btn-primary"> Ver Servicios de <b> Salud Mental </b></button>
 				    </div>
 				  </div>
+
 				  <div class="card">
 				    <img class="card-img-top" src="..." alt="Card image cap">
 				    <div class="card-body">
 				      <h5 class="card-title">Medicina Nuclear</h5>
-				      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+				      <p class="card-text">Tecnología de vanguardia aplicada al diagnóstico y tratamiento médico mediante radiotrazadores. Contamos con equipos de alta precisión para estudios metabólicos, oncológicos y cardiológicos orientados a una detección temprana.</p>
 				      <p class="card-text"><button id="btnMN" class="btn btn-success"> Ver Servicios de <b> Medicina Nuclear </b></button>
 				    </div>
 				  </div>
@@ -112,6 +121,50 @@ include('resources/scripts/databaseQueries.php');
 
     </div>
 
+
+<footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        
+        <div class="row mt-3">
+
+            <!--Info Hospital-->
+
+            <div class="col-md-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold text-white">JustAnother Hospital</h6>
+                <p class="text-white">JustAnother Hospital es una Institución médica orientada a la excelencia en la atención de la salud, la innovación tecnológica y el compromiso con el bienestar de la comunidad. Brindamos servicios integrales de alta complejidad bajo los más altos estándares de calidad y seguridad para el paciente.</p>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" id="hr-footer">
+            </div>
+
+            <!--Links-->
+            <div class="col-md-2 col-lg-2 col-xl-2 mb-auto">
+            <h6 class="text-uppercase fw-bold"> Secciones></h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" id="hr-footer">
+            <p><a href="#" class="text-white text-decoration-none">Inicio</a></p>
+            <p><a href="cuerpo-medico/especialidades/index.html" class="text-white text-decoration-none">Especialidades</a></p>
+            <p><a href="pacientes/gestionar-turnos/index.html" class="text-white text-decoration-none">Turnos</a></p>
+            <p><a href="administracion/contacto.html" class="text-white text-decoration-none">Contacto</a></p>
+
+        </div>
+        <!--Contacto-->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold">Contacto</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" id="hr-footer">
+            <p class="text-muted"><li class="fas fa-home mr-3"></li> Buenos Aires, Argentina</p>
+            <p class="text-muted"><li class="fas fa-envolpe mr-3"></li>email@justanotherhospital.domain</p>
+            <p class="text-muted"><li class="fa-phone mr-3">Telefono</li>
+        </div>
+        <hr class="mb-4 bg-secondary">
+    <!-- Copy -->
+    <div class="row align-items-center">
+         <div class="col-md-7 col-lg-8">
+        <p class="text-muted text-center text-md-start">
+             
+            <a href="#" class="text-white text-decoration-none fw-bold"> &copy; JustAnother Hospital -  All Rights Reserved</a>
+        </p>
+    </div>
+</div>
+    </div>
+</footer>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" type="text/javascript"></script>

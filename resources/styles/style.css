@@ -4,3 +4,20 @@
 
 }
 
+#logo {
+   text-align: center;
+}
+
+#hr-footer {
+   width: 60px;
+   background-color: #ffc107;
+   height: 2px;
+}
+
+#center-items{
+   text-align: center;
+}
+
+li {
+   list-style-type: none;
+}

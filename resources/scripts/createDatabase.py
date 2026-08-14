@@ -524,8 +524,9 @@ print("[*] Creando tabla usuarios (Testing purposes only)")
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS usuarios (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        user varchar(100) NOT NULL,
-        password varchar(100) NOT NULL)
+        user VARCHAR(100) NOT NULL,
+        password VARCHAR(100) NOT NULL)
+        rol ENUM('medico', 'enfermero', 'farmaceutico', 'administrativo')
 """)
 
 conn.commit()

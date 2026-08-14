@@ -10,3 +10,8 @@ Sistema de Simulación de Gestión Hospitalaria.
 2. **Instalar** Laragon o XAMPP
 3. **Iniciar Servicios**: Ejecutar APACHE y MySQL
 4. **Inicializar entorno**: Ejecutar el script `init.cmd`.
+
+## Recursos Gráficos
+> **Nota:** Todos los recursos visual están Auto-generados con Inteligencia Artificial.
+## Texto por Default
+> **Nota:** Los textos por defecto están Auto-generados con Inteligencia Artificial.

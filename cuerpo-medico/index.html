@@ -1,3 +1,10 @@
+<!--
+<?php 
+include('resources/scripts/database.php');
+include('resources/scripts/databaseQueries.php');
+?>
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +28,13 @@
                     <a class="nav-link" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cuerpo-medico/index.html">Cuerpo Medico</a>
+                    <a class="nav-link" href="../cuerpo-medico/index.html">Cuerpo Medico</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="servicios/index.html">Servicios</a>
+                    <a class="nav-link" href="../servicios/index.html">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="estudios/index.html">Estudios</a>
+                    <a class="nav-link" href="../estudios/index.html">Estudios</a>
                 </li>
                 
                 <!-- Dropdown de Sedes -->
@@ -36,9 +43,9 @@
                         Sedes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownSedes">
-                        <a class="dropdown-item" href="sedes/sede-carupa/index.html">Carupá</a>
-                        <a class="dropdown-item" href="sedes/sede-san-isidro/index.html">San Isidro</a>
-                        <a class="dropdown-item" href="sedes/sede-vicente-lopez/index.html">Vicente López</a>
+                        <a class="dropdown-item" href="../sedes/sede-carupa/index.html">Carupá</a>
+                        <a class="dropdown-item" href="../sedes/sede-san-isidro/index.html">San Isidro</a>
+                        <a class="dropdown-item" href="../sedes/sede-vicente-lopez/index.html">Vicente López</a>
                     </div>
                 </li>
 
@@ -48,16 +55,16 @@
                         Pacientes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownPacientes">
-                        <a class="dropdown-item" href="pacientes/resultados/resultados-imagenes/index.html">Resultados de Imágenes</a>
-                        <a class="dropdown-item" href="pacientes/resultados/resultados-analisis/index.html">Resultados de Análisis</a>
-                        <a class="dropdown-item" href="pacientes/gestionar-internacion/index.html">Internaciones</a>
-                        <a class="dropdown-item" href="facturacion/index.html">Facturación</a>
+                        <a class="dropdown-item" href="../pacientes/resultados/resultados-imagenes/index.html">Resultados de Imágenes</a>
+                        <a class="dropdown-item" href="../pacientes/resultados/resultados-analisis/index.html">Resultados de Análisis</a>
+                        <a class="dropdown-item" href="../pacientes/gestionar-internacion/index.html">Internaciones</a>
+                        <a class="dropdown-item" href="../facturacion/index.html">Facturación</a>
                     </div>
                 </li>
 
                 <!--Dropdown Médicos-->
                 <li class="nav-item dropdown">
-                	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
+                	<a class="nav-link dropdown-toggle" href="../medicos/login/login.html" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
                 		Area Médicos
                 	</a>
                 	<div class="dropdown-menu" aria-labelledby="navbarDropdownMedicos">
@@ -70,6 +77,134 @@
     </nav>
 
     <!--Contenido Principal-->
+    <div id="logo">
+        <img id="logo" src="../resources/images/serpienteMedicina.png" class="rounded-circle" style="width: 200px; height: auto;" alt="logoSerpienteMedicina">
+    </div>
+
+
+<!--Validar con PHP la disponibilidad dinámicamente de los médicos-->
+
+    <!-- Cards Médicos -->
+    <div id="main-content-container">
+        <div class="card-group">
+
+                  <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">[Nombre_Medico]</h5>
+                      <p class="card-text">[Especialidad] - 
+                        <hr>
+                     [Disponibilidad]</p>
+
+                      <p class="card-text"><button id="btnHDD" class="btn btn-light">Contactar a <b>[Nombre_Medico]</b></button>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">[Nombre_Medico]</h5>
+                      <p class="card-text">[Especialidad] -
+                      <hr>
+                  [Disponibilidad] </p>
+                      <p class="card-text"><button id="btnSM" class="btn btn-primary"> Contactar a [<b>Nombre_Medico</b>]</button>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">[Nombre_Medico]</h5>
+                      <p class="card-text">[Especialidad] - 
+                        <hr>
+                    [Disponibilidad]</p>
+                      <p class="card-text"><button id="btnMN" class="btn btn-secondary"> Contactar a [<b>Nombre_Medico</b>] </b></button>
+                    </div>
+
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">[Nombre_Medico]</h5>
+                      <p class="card-text">[Especialidad] - 
+                        <hr>
+                     [Disponibilidad]</p>
+
+                      <p class="card-text"><button id="btnHDD" class="btn btn-danger">Contactar a <b>[Nombre_Medico]</b></button>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">[Nombre_Medico]</h5>
+                      <p class="card-text">[Especialidad] -
+                      <hr>
+                  [Disponibilidad] </p>
+                      <p class="card-text"><button id="btnSM" class="btn btn-info"> Contactar a [<b>Nombre_Medico</b>]</button>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">[Nombre_Medico]</h5>
+                      <p class="card-text">[Especialidad] - 
+                        <hr>
+                    [Disponibilidad]</p>
+                      <p class="card-text"><button id="btnMN" class="btn btn-dark"> Contactar a [<b>Nombre_Medico</b>] </b></button>
+                    </div>
+                  </div>
+                </div>                
+                </div>                  
+
+    </div>
+
+    <!--Footer-->
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        
+        <div class="row mt-3">
+
+            <!--Info Hospital-->
+
+            <div class="col-md-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold text-white">JustAnother Hospital</h6>
+                <p class="text-white">JustAnother Hospital es una Institución médica orientada a la excelencia en la atención de la salud, la innovación tecnológica y el compromiso con el bienestar de la comunidad. Brindamos servicios integrales de alta complejidad bajo los más altos estándares de calidad y seguridad para el paciente.</p>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" id="hr-footer">
+            </div>
+
+            <!--Links-->
+            <div class="col-md-2 col-lg-2 col-xl-2 mb-auto">
+            <h6 class="text-uppercase fw-bold"> Secciones></h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" id="hr-footer">
+            <p><a href="#" class="text-white text-decoration-none">Inicio</a></p>
+            <p><a href="../cuerpo-medico/especialidades/index.html" class="text-white text-decoration-none">Especialidades</a></p>
+            <p><a href="../pacientes/gestionar-turnos/index.html" class="text-white text-decoration-none">Turnos</a></p>
+            <p><a href="../administracion/contacto.html" class="text-white text-decoration-none">Contacto</a></p>
+
+        </div>
+        <!--Contacto-->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold">Contacto</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" id="hr-footer">
+            <p class="text-muted"><li class="fas fa-home mr-3"></li> Buenos Aires, Argentina</p>
+            <p class="text-muted"><li class="fas fa-envolpe mr-3"></li>email@justanotherhospital.domain</p>
+            <p class="text-muted"><li class="fa-phone mr-3">Telefono</li>
+        </div>
+        <hr class="mb-4 bg-secondary">
+    <!-- Copy -->
+    <div class="row align-items-center">
+         <div class="col-md-7 col-lg-8">
+        <p class="text-muted text-center text-md-start">
+             
+            <a href="#" class="text-white text-decoration-none fw-bold"> &copy; JustAnother Hospital -  All Rights Reserved</a>
+        </p>
+    </div>
+</div>
+    </div>
+</footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" type="text/javascript"></script>
