@@ -12,7 +12,7 @@ include('resources/scripts/databaseQueries.php');
     <link rel="stylesheet" href="../resources/styles/bootstrap.css" type="text/css">
     <link rel="icon" href="../resources/images/favicon.ico" type="image/x-icon"> 
     <link rel="stylesheet" href="../resources/styles/style.css" type="text/css">
-    <title>Estudios | JustAnother Hospital</title>
+    <title>Servicios | JustAnother Hospital</title>
 </head>
 
 <!--Bootstrap Navbar-->
@@ -84,85 +84,55 @@ include('resources/scripts/databaseQueries.php');
 
     </div>
 
-    <!-- Cards Estudios -->
-<div id="main-content-container">
-    <div class="card-group">
+    <div id="main-content-container">
+        <!--Servicios Cards-->
+        <div class="card-group">
 
-        <!-- Card 1: Laboratorio -->
-        <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Laboratorio</h5>
-                <hr>
-                <p class="card-text">
-                    <a id="btnLab" class="btn btn-light">Ver estudios de <b>Laboratorio</b></a>
-                </p>
-            </div>
-        </div>
+                  <div class="card">
+                    <img class="card-img-top" src="resources/images/justanotherHospital-HospitalDia.png" alt="MedicinaSueno">
+                    <div class="card-body">
+                      <h5 class="card-title">Medicina del Sueño y Descanso Clinico</h5>
+                      <p class="card-text">Monitoreo y diagnóstico del sueño (Polisomnografía): Unidades especializadas para estudiar trastornos del sueño (insomnio crónico, apneas, parasomnias) en habitaciones insonorizadas y diseñadas para simular un ambiente hogareño de lujo en lugar de una habitación de hospital tradicional.
 
-        <!-- Card 2: Rayos -->
-        <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Rayos</h5>
-                <hr>
-                <p class="card-text">
-                    <a id="btnRay" class="btn btn-primary">Ver estudios de <b>Rayos</b></a>
-                </p>
-            </div>
-        </div>
+                    Terapias de reseteo circadiano: Programas médicos personalizados para regularizar los ritmos circadianos afectados por estrés crónico o turnos rotativos laborales.</p>
+                      <p class="card-text"><button id="btnMSD" class="btn btn-secondary">Ver Detalle</button>
+                    </div>
+                  </div>
 
-        <!-- Card 3: Ecografías -->
-        <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Ecografías</h5>
-                <hr>
-                <p class="card-text">
-                    <a id="btnEcografia" class="btn btn-secondary">Ver estudios de <b>Ecografías</b></a>
-                </p>
-            </div>
-        </div>
+                  <div class="card">
+                    <img class="card-img-top" src="resources/images/JustAnotherHospital-SM.png" alt="PostOperacion">
+                    <div class="card-body">
+                      <h5 class="card-title">Recuperación Post-Operatoria</h5>
+                      <p class="card-text">Estadías de post-operatorio "Slow Recovery": Habitaciones de internación con control médico absoluto pero libres de ruidos molestos, alarmas constantes o interrupciones innecesarias, optimizadas para bajar los niveles de cortisol y acelerar la cicatrización física y mental.
 
-        <!-- Card 4: EcoDoppler -->
-        <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">EcoDoppler</h5>
-                <hr>
-                <p class="card-text">
-                    <a id="btnEcodoppler" class="btn btn-secondary">Ver estudios de <b>EcoDoppler</b></a>
-                </p>
-            </div>
-        </div>
+                    Enfermería de baja intrusión: Protocolos de atención médica nocturna silenciosa (monitoreo biométrico no invasivo) para respetar estrictamente las horas de sueño del paciente.</p>
+                      <p class="card-text"><button id="btnPO" class="btn btn-primary"> Ver Detalle</button>
+                    </div>
+                  </div>
 
-        <!-- Card 5: Tomografía -->
-        <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Tomografía</h5>
-                <hr>
-                <p class="card-text">
-                    <a id="btnTomografia" class="btn btn-secondary">Ver estudios de <b>Tomografía</b></a>
-                </p>
-            </div>
-        </div>
+                  <div class="card">
+                    <img class="card-img-top" src="..." alt="SM BD">
+                    <div class="card-body">
+                      <h5 class="card-title">Salud Mental - Burnout y Desconexión Digital</h5>
+                      <p class="card-text">Programas de desintoxicación digital y clínica: Espacios libres de pantallas y estímulos lumínicos intensos para pacientes con fatiga mental extrema, ansiedad o síndrome de burnout.
 
-        <!-- Card 6: Electro -->
-        <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Electrocardiograma / Electroencefalograma</h5>
-                <hr>
-                <p class="card-text">
-                    <a id="btnElectro" class="btn btn-secondary">Ver estudios de <b>Electrocardiograma / Electroencefalograma</b></a>
-                </p>
-            </div>
-        </div>
+                        Psiquiatría y psicología integrativa: Terapias de apoyo emocional con un enfoque en la calma, la meditación clínica y el manejo de crisis de ansiedad.</p>
+                      <p class="card-text"><button id="btnSMBurn" class="btn btn-success"> Ver Detalle</button>
+                    </div>
+                   
+                  </div>
+                   <div class="card">
+                    <img class="card-img-top" src="..." alt="TRP - BF">
+                    <div class="card-body">
+                      <h5 class="card-title">Bienestar Físico y Terapias de Relajación Profunda (TRP)</h5>
+                      <p class="card-text">Hidroterapia y balneoterapia médica: Circuitos de agua, baños termales controlados y masajes terapéuticos para la relajación muscular profunda.
 
+                        Nutrición antiinflamatoria y del sueño: Menús diseñados por nutricionistas clínicos con alimentos que favorecen la producción natural de melatonina y la salud digestiva durante la recuperación.</p>
+                      <p class="card-text"><button id="btnTRPBF" class="btn btn-success"> Ver Detalle</button>
+                    </div>
+                </div>                  
+    	
     </div>
-</div>              
-                
 
 
 <footer class="bg-dark text-white pt-5 pb-4">
@@ -213,6 +183,6 @@ include('resources/scripts/databaseQueries.php');
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" type="text/javascript"></script>
-    <script src="../../../resources/scripts/functions_estudios.js"></script>
+    <script src="../resources/scripts/functions_servicios.js"></script>
 </body>
 </html>

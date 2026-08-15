@@ -36,17 +36,22 @@ for rol in roles:
     print(f"[*] Generando cinco {rol}es")
 
     for _ in range(5):
+        nombre = fake.first_name()
+        apellido = fake.last_name()
         nombre_usuario = fake.user_name()
         password = fake.password(length=10)
         email = fake.ascii_free_email()
 
         
         cursor.execute(
-            "INSERT INTO usuarios (user, email, password, rol) VALUES (%s, %s, %s, %s)",
-            (nombre_usuario, email, password, rol)
+            "INSERT INTO usuarios (nombre, apellido, nombre_usuario, email, password rol) VALUES (%s, %s, %s, %s, %s)",
+            (nombre, apellido, nombre_usuario, email, password, rol)
         )
         
+        print()
+        print(f" - Nombre: {nombre} | Apellido: {apellido}")
         print(f"    - Usuario: {nombre_usuario} | Rol: {rol} | Email: {email} | Password: {password}")
+
 
 conn.commit()
 cursor.close()

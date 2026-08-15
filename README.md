@@ -12,6 +12,6 @@ Sistema de Simulación de Gestión Hospitalaria.
 4. **Inicializar entorno**: Ejecutar el script `init.cmd`.
 
 ## Recursos Gráficos
-> **Nota:** Todos los recursos visual están Auto-generados con Inteligencia Artificial.
+> **Nota:** Todos los recursos visuales están Auto-generados con Inteligencia Artificial.
 ## Texto por Default
 > **Nota:** Los textos por defecto están Auto-generados con Inteligencia Artificial.
