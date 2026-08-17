@@ -1,5 +1,5 @@
 # Author: Amanda Julieta
-# Version: 1.1
+# Version: 1.2
 # Date: 2026-08-11 America/South_America/Argentina
 
 import mysql.connector
@@ -13,25 +13,29 @@ conn = mysql.connector.connect(
 cursor = conn.cursor()
 
 # Crear y seleccionar la base de datos
+print("[!] Eliminando base de datos (development only)")
+cursor.execute("DROP DATABASE IF EXISTS db_justanother_hospital")
 cursor.execute("CREATE DATABASE IF NOT EXISTS db_justanother_hospital")
 print("[*] Base de Datos creada exitosamente!")
 
 cursor.execute("USE db_justanother_hospital")
 print("[*] Usando la base de datos db_justanother_hospital")
+print("[!] Desactivando **TEMPORALMENTE** las FK")
+cursor.execute("SET FOREIGN_KEY_CHECKS=0;")
 
 print("[*] Eliminando tablas...")
 cursor.execute("DROP TABLE IF EXISTS pagos")
 cursor.execute("DROP TABLE IF EXISTS detalle_factura")
 cursor.execute("DROP TABLE IF EXISTS facturas")
 cursor.execute("DROP TABLE IF EXISTS tarifario")
-cursor.execute("DROP TABLE IF EXISTS equipo_quirugico")
+cursor.execute("DROP TABLE IF EXISTS equipo_quirurgico")
 cursor.execute("DROP TABLE IF EXISTS cirugias_programadas")
 cursor.execute("DROP TABLE IF EXISTS quirofanos")
 cursor.execute("DROP TABLE IF EXISTS dispensacion_farmacia")
 cursor.execute("DROP TABLE IF EXISTS movimiento_stock")
 cursor.execute("DROP TABLE IF EXISTS proveedores")
 cursor.execute("DROP TABLE IF EXISTS lotes_medicamentos")
-cursor.execute("DROP TABLE IF EXISTS medicamento_insumos")
+cursor.execute("DROP TABLE IF EXISTS medicamentos_insumos")
 cursor.execute("DROP TABLE IF EXISTS resultados_estudios")
 cursor.execute("DROP TABLE IF EXISTS ordenes_estudios")
 cursor.execute("DROP TABLE IF EXISTS tipos_estudios")
@@ -41,7 +45,7 @@ cursor.execute("DROP TABLE IF EXISTS evoluciones_internacion")
 cursor.execute("DROP TABLE IF EXISTS detalle_recetas")
 cursor.execute("DROP TABLE IF EXISTS recetas_medicas")
 cursor.execute("DROP TABLE IF EXISTS signos_vitales")
-cursor.execute("DROP TABLE IF EXISTS consulta_diagnostico")
+cursor.execute("DROP TABLE IF EXISTS consulta_diagnosticos")
 cursor.execute("DROP TABLE IF EXISTS diagnosticos")
 cursor.execute("DROP TABLE IF EXISTS consultas")
 cursor.execute("DROP TABLE IF EXISTS turnos")
@@ -51,12 +55,11 @@ cursor.execute("DROP TABLE IF EXISTS camas")
 cursor.execute("DROP TABLE IF EXISTS habitaciones")
 cursor.execute("DROP TABLE IF EXISTS sectores")
 cursor.execute("DROP TABLE IF EXISTS pisos_edificio")
-cursor.execute("DROP TABLE IF EXISTS horario_personal")
-cursor.execute("DROP TABLE IF EXISTS enfermeras_turnos")
+cursor.execute("DROP TABLE IF EXISTS horarios_personal")
 cursor.execute("DROP TABLE IF EXISTS medicos_especialidades")
 cursor.execute("DROP TABLE IF EXISTS especialidades")
 cursor.execute("DROP TABLE IF EXISTS empleados")
-cursor.execute("DROP TABLE IF EXISTS pacientes_cobertura")
+cursor.execute("DROP TABLE IF EXISTS pacientes_coberturas")
 cursor.execute("DROP TABLE IF EXISTS obras_sociales_prepagas")
 cursor.execute("DROP TABLE IF EXISTS contactos_emergencia")
 cursor.execute("DROP TABLE IF EXISTS pacientes")
@@ -66,6 +69,7 @@ print("[*] Tablas eliminadas exitosamente...")
 print("[*] Creando tablas...")
 print("[**] Creando tablas Pacientes e Identidad")
 
+# Corrección: Usamos 'id' en lugar de 'cobertura_id' para mantener la consistencia con el resto de las tablas
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS Obras_Sociales_Prepagas (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -130,6 +134,18 @@ cursor.execute("""
     )
 """)
 
+print("[+] CREANDO TABLA HORARIOS_EMPLEADOS")
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS Horarios_Empleados (
+        empleado_id INT,
+        dia_semana VARCHAR(100),
+        hora_inicio VARCHAR(50),
+        hora_fin VARCHAR(50),
+        turno VARCHAR(100),
+        FOREIGN KEY (empleado_id) REFERENCES Empleados(id)
+    )
+""")
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS Especialidades (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -163,19 +179,18 @@ print("[+] TABLA PERSONAL CREADA CON EXITO")
 print("[*] CREANDO TABLAS INFRAESTRUCTURA MEDICA")
 
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS Pisos_Edificio (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        numero_piso INT NOT NULL,
-        descripcion VARCHAR(100)
+    CREATE TABLE IF NOT EXISTS pisos_edificio (
+        piso_id INT AUTO_INCREMENT PRIMARY KEY,
+        nombre VARCHAR(100) NOT NULL
     )
 """)
 
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS Sectores (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        piso_id INT NOT NULL,
-        nombre_sector VARCHAR(100) NOT NULL,
-        FOREIGN KEY (piso_id) REFERENCES Pisos_Edificio(id)
+        nombre VARCHAR(100) NOT NULL,
+        piso_id INT,
+        FOREIGN KEY (piso_id) REFERENCES pisos_edificio(piso_id)
     )
 """)
 
@@ -256,6 +271,7 @@ print("[*] CREANDO TABLAS CLINICO")
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS Diagnosticos (
         id INT AUTO_INCREMENT PRIMARY KEY,
+        nombre VARCHAR(100),
         codigo_cie10 VARCHAR(20) NOT NULL UNIQUE,
         descripcion_enfermedad VARCHAR(255) NOT NULL
     )
@@ -521,14 +537,21 @@ cursor.execute("""
 """)
 
 print("[*] Creando tabla usuarios (Testing purposes only)")
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS usuarios (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        user VARCHAR(100) NOT NULL,
-        password VARCHAR(100) NOT NULL)
-        rol ENUM('medico', 'enfermero', 'farmaceutico', 'administrativo')
+        id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+        nombre VARCHAR(100) NOT NULL,
+        apellido VARCHAR(100) NOT NULL,
+        nombre_usuario VARCHAR(100) NOT NULL,
+        email VARCHAR(150) NOT NULL,
+        password VARCHAR(100) NOT NULL,
+        rol ENUM('medico', 'enfermero', 'farmaceutico', 'administrativo') NOT NULL
+    )
 """)
 
+print("[!] Activando las FK")
+cursor.execute("SET FOREIGN_KEY_CHECKS=1;")
 conn.commit()
 cursor.close()
 conn.close()

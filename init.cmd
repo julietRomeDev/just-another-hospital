@@ -3,7 +3,7 @@ title Configure Environment - Just Another Hospital
 color 0b
 
 echo ========================================================
-echo       CONFIGURACION DEL ENTORNO - HOSPITAL DB
+echo       CONFIGURACION DEL ENTORNO - JustAnother Hospital
 echo ========================================================
 echo.
 echo [!] Asegurate de que Laragon o XAMPP tengan MySQL activo.
