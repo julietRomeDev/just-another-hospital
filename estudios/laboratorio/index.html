@@ -21,13 +21,13 @@
                     <a class="nav-link" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../cuerpo-medico/index.html">Cuerpo Medico</a>
+                    <a class="nav-link" href="../../cuerpo-medico/index.html">Cuerpo Medico</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../servicios/index.html">Servicios</a>
+                    <a class="nav-link" href="../../servicios/index.html">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../estudios/index.html">Estudios</a>
+                    <a class="nav-link" href="../../estudios/index.html">Estudios</a>
                 </li>
                 
                 <!-- Dropdown de Sedes -->
@@ -36,9 +36,9 @@
                         Sedes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownSedes">
-                        <a class="dropdown-item" href="../sedes/sede-carupa/index.html">Carupá</a>
-                        <a class="dropdown-item" href="../sedes/sede-san-isidro/index.html">San Isidro</a>
-                        <a class="dropdown-item" href="../sedes/sede-vicente-lopez/index.html">Vicente López</a>
+                        <a class="dropdown-item" href="../../sedes/sede-carupa/index.html">Carupá</a>
+                        <a class="dropdown-item" href="../../sedes/sede-san-isidro/index.html">San Isidro</a>
+                        <a class="dropdown-item" href="../../sedes/sede-vicente-lopez/index.html">Vicente López</a>
                     </div>
                 </li>
 
@@ -48,32 +48,32 @@
                         Pacientes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownPacientes">
-                        <a class="dropdown-item" href="../pacientes/resultados/resultados-imagenes/index.html">Resultados de Imágenes</a>
-                        <a class="dropdown-item" href="../pacientes/resultados/resultados-analisis/index.html">Resultados de Análisis</a>
-                        <a class="dropdown-item" href="../pacientes/gestionar-internacion/index.html">Internaciones</a>
-                        <a class="dropdown-item" href="../facturacion/index.html">Facturación</a>
+                        <a class="dropdown-item" href="../../pacientes/resultados/resultados-imagenes/index.html">Resultados de Imágenes</a>
+                        <a class="dropdown-item" href="../../pacientes/resultados/resultados-analisis/index.html">Resultados de Análisis</a>
+                        <a class="dropdown-item" href="../../pacientes/gestionar-internacion/index.html">Internaciones</a>
+                        <a class="dropdown-item" href="../../facturacion/index.html">Facturación</a>
                     </div>
                 </li>
 
                 <!--Dropdown Médicos-->
                 <li class="nav-item dropdown">
-                	<a class="nav-link dropdown-toggle" href="../medicos/login/login.html" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
+                	<a class="nav-link dropdown-toggle" href="../../medicos/login/login.html" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
                 		Area Médicos
                 	</a>
                 	<div class="dropdown-menu" aria-labelledby="navbarDropdownMedicos">
-                		<a class="dropdown-item" href="medicos/login/login.html" target="_blank">Iniciar Sesion</a>
+                		<a class="dropdown-item" href="../../medicos/login/login.html" target="_blank">Iniciar Sesion</a>
                 	</div>
                 </li>
                 <!--Dropdown test-->
                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="../medicos/login/login.html" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
+                    <a class="nav-link dropdown-toggle" href="../../medicos/login/login.html" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
                         Especialidades
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMedicos">
-                        <a class="dropdown-item" href="especialidades/#" target="_blank">Especialidad 1</a>
-                        <a class="dropdown-item" href="especialidades/#" target="_blank">Especialidad 2</a>
-                        <a class="dropdown-item" href="especialidades/#" target="_blank">Especialidad 3</a>
-                        <a class="dropdown-item" href="especialidades/#" target="_blank">Especialidad 4</a>
+                        <a class="dropdown-item" href="../../especialidades/#" target="_blank">Especialidad 1</a>
+                        <a class="dropdown-item" href="../../especialidades/#" target="_blank">Especialidad 2</a>
+                        <a class="dropdown-item" href="../../especialidades/#" target="_blank">Especialidad 3</a>
+                        <a class="dropdown-item" href="../../especialidades/#" target="_blank">Especialidad 4</a>
 
                     </div>
                 </li>
@@ -82,8 +82,101 @@
         </div>
     </nav>
 
+    <!--Contenido Principal-->
 
-    <footer class="bg-dark text-white pt-5 pb-4">
+   <!--Los estudios de laboratorio vienen dados por Base de Datos - Datos para el desarrollo
+   del frontend-->
+   
+     <!--Contenido Principal-->
+
+    <div id="logo">
+
+        <img id="logo" src="../../resources/images/logoJustAnotherHospital.png" class="rounded-circle" style="width: 200px; height: auto;" alt="logoSerpienteMedicina">
+
+    </div>
+
+    <!-- Cards Laboratorio -->
+<div id="main-content-container">
+    <div class="card-group">
+
+        <!-- Card 1: Hemograma Completo -->
+        <div class="card">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-HemogramaCompleto.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Hemograma Completo</h5>
+                <hr>
+                <p class="card-text">
+                    <a href="estudio/hemograma-completo" id="btnLab" class="btn btn-light">Sacar turno para <b>Hemograma Completo</b></a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 2: Glucemia -->
+        <div class="card">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-Glucemia.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Glucemia</h5>
+                <hr>
+                <p class="card-text">
+                    <a id="btnRay" href="estudio/glucemia" class="btn btn-primary">Sacar turno para <b>Glucemia</b></a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 3: Perfil Lipidico -->
+        <div class="card">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-PerfilLipidico.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Perfil Lipidico</h5>
+                <hr>
+                <p class="card-text">
+                    <a id="btnEcografia" href="estudio/perfil-lipidico" class="btn btn-secondary">Sacar turno para <b>Perfil Lipidico</b></a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 4: Funcion Renal -->
+        <div class="card">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-FuncionRenal.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Función Renal</h5>
+                <hr>
+                <p class="card-text">
+                    <a id="btnEcodoppler" href="estudio/funcion-renal" class="btn btn-secondary">Sacar turno para  <b>Función Renal</b></a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 5: Hepatograma -->
+        <div class="card">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-Hepatograma.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Hepatograma</h5>
+                <hr>
+                <p class="card-text">
+                    <a id="btnTomografia" href="estudio/hepatograma" class="btn btn-secondary">Sacar turno para <b>Hepatograma</b></a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 6: Examen Completo Orina -->
+        <div class="card">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-ExamOrinaCompleto.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Examen Completo de Orina</h5>
+                <hr>
+                <p class="card-text">
+                    <a id="btnElectro" href="estudio/examen-orina" class="btn btn-secondary">Sacar turno para <b>Examen Completo de Orina</b></a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>              
+                
+
+
+<footer class="bg-dark text-white pt-5 pb-4">
     <div class="container text-center text-md-start">
         
         <div class="row mt-3">
@@ -131,6 +224,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" type="text/javascript"></script>
-    <script src="../../../resources/scripts/functions.js"></script>
+    
 </body>
 </html>
