@@ -1,21 +1,15 @@
-<!--
-<?php 
-include('resources/scripts/database.php');
-include('resources/scripts/databaseQueries.php');
-?>
--->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../resources/styles/bootstrap.css" type="text/css">
-    <link rel="icon" href="../resources/images/favicon.ico" type="image/x-icon"> 
-    <link rel="stylesheet" href="../resources/styles/style.css" type="text/css">
-    <title>Estudios | JustAnother Hospital</title>
+    <link rel="stylesheet" href="../../resources/styles/bootstrap.css" type="text/css">
+    <link rel="icon" href="../../resources/images/favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="../../resources/styles/style.css" type="text/css">
+    <title>Estudios | Laboratorio | JustAnother Hospital</title>
 </head>
-
-<!--Bootstrap Navbar-->
+<body>
+    <!--Bootstrap Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">JustAnother Hospital</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropDown" aria-controls="navbarNavDropDown" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,13 +21,13 @@ include('resources/scripts/databaseQueries.php');
                     <a class="nav-link" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../cuerpo-medico/index.html">Cuerpo Medico</a>
+                    <a class="nav-link" href="../../cuerpo-medico/index.html">Cuerpo Medico</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../servicios/index.html">Servicios</a>
+                    <a class="nav-link" href="../../servicios/index.html">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../estudios/index.html">Estudios</a>
+                    <a class="nav-link" href="../../estudios/index.html">Estudios</a>
                 </li>
                 
                 <!-- Dropdown de Sedes -->
@@ -42,9 +36,9 @@ include('resources/scripts/databaseQueries.php');
                         Sedes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownSedes">
-                        <a class="dropdown-item" href="../sedes/sede-tigre/index.html">Tigre</a>
-                        <a class="dropdown-item" href="../sedes/sede-san-isidro/index.html">San Isidro</a>
-                        <a class="dropdown-item" href="../sedes/sede-vicente-lopez/index.html">Vicente López</a>
+                        <a class="dropdown-item" href="../../sedes/sede-carupa/index.html">Carupá</a>
+                        <a class="dropdown-item" href="../../sedes/sede-san-isidro/index.html">San Isidro</a>
+                        <a class="dropdown-item" href="../../sedes/sede-vicente-lopez/index.html">Vicente López</a>
                     </div>
                 </li>
 
@@ -54,22 +48,34 @@ include('resources/scripts/databaseQueries.php');
                         Pacientes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownPacientes">
-                        <a class="dropdown-item" href="../pacientes/resultados/resultados-imagenes/index.html">Resultados de Imágenes</a>
-                        <a class="dropdown-item" href="../pacientes/resultados/resultados-analisis/index.html">Resultados de Análisis</a>
-                        <a class="dropdown-item" href="../pacientes/gestionar-internacion/index.html">Internaciones</a>
-                        <a class="dropdown-item" href="../facturacion/index.html">Facturación</a>
-                        <a class="dropdown-item"href="../pacientes/gestionar-turnos/index.html">Turnos</a>
+                        <a class="dropdown-item" href="../../pacientes/resultados/resultados-imagenes/index.html">Resultados de Imágenes</a>
+                        <a class="dropdown-item" href="../../pacientes/resultados/resultados-analisis/index.html">Resultados de Análisis</a>
+                        <a class="dropdown-item" href="../../pacientes/gestionar-internacion/index.html">Internaciones</a>
+                        <a class="dropdown-item" href="../../facturacion/index.html">Facturación</a>
                     </div>
                 </li>
 
                 <!--Dropdown Médicos-->
                 <li class="nav-item dropdown">
-                	<a class="nav-link dropdown-toggle" href="../medicos/login/login.html" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
+                	<a class="nav-link dropdown-toggle" href="../../medicos/login/login.html" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
                 		Area Médicos
                 	</a>
                 	<div class="dropdown-menu" aria-labelledby="navbarDropdownMedicos">
-                		<a class="dropdown-item" href="../medicos/login/login.html" target="_blank">Iniciar Sesion</a>
+                		<a class="dropdown-item" href="../../medicos/login/login.html" target="_blank">Iniciar Sesion</a>
                 	</div>
+                </li>
+                <!--Dropdown test-->
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../../medicos/login/login.html" id="navbarDropdownMedicos" data-toggle="dropdown" aria-haspopup="true" aria-exapendad="false">
+                        Especialidades
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMedicos">
+                        <a class="dropdown-item" href="../../especialidades/#" target="_blank">Especialidad 1</a>
+                        <a class="dropdown-item" href="../../especialidades/#" target="_blank">Especialidad 2</a>
+                        <a class="dropdown-item" href="../../especialidades/#" target="_blank">Especialidad 3</a>
+                        <a class="dropdown-item" href="../../especialidades/#" target="_blank">Especialidad 4</a>
+
+                    </div>
                 </li>
 
             </ul>
@@ -78,84 +84,89 @@ include('resources/scripts/databaseQueries.php');
 
     <!--Contenido Principal-->
 
+   <!--Los estudios de laboratorio vienen dados por Base de Datos - Datos para el desarrollo
+   del frontend-->
+   
+     <!--Contenido Principal-->
+
     <div id="logo">
 
-        <img id="logo" src="../resources/images/logoJustAnotherHospital.png" class="rounded-circle" style="width: 200px; height: auto;" alt="logoSerpienteMedicina">
+        <img id="logo" src="../../resources/images/logoJustAnotherHospital.png" class="rounded-circle" style="width: 200px; height: auto;" alt="logoSerpienteMedicina">
 
     </div>
 
-    <!-- Cards Estudios -->
+    <!-- Cards Rayos -->
 <div id="main-content-container">
     <div class="card-group">
 
-        <!-- Card 1: Laboratorio -->
+        <!-- Card 1: Radiografía de Tórax -->
         <div class="card">
-            <img class="card-img-top" src="../resources/images/JustAnotherHospital-Lab.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-.png" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Laboratorio</h5>
+                <h5 class="card-title">Radiografía de Tórax</h5>
                 <hr>
                 <p class="card-text">
-                    <a href="laboratorio/index.html" id="btnLab" class="btn btn-light">Ver estudios de <b>Laboratorio</b></a>
+                    <a href="estudio/radiografia-torax" id="btnLab" class="btn btn-light">Sacar turno para <b>Radiografia de Tórax</b></a>
                 </p>
             </div>
         </div>
 
-        <!-- Card 2: Rayos -->
+        <!-- Card 2: Radiografía Columna -->
         <div class="card">
-            <img class="card-img-top" src="../resources/images/JustAnotherHospital-Rayos.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-.png" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Rayos</h5>
+                <h5 class="card-title">Radiografia de Columna Vertebral</h5>
                 <hr>
                 <p class="card-text">
-                    <a id="btnRay" href="rayos/index.html" class="btn btn-primary">Ver estudios de <b>Rayos</b></a>
+                    <a id="btnRay" href="estudio/radiografia-columna/" class="btn btn-primary">Sacar turno para <b>Radiografia de Columna Vertebral</b></a>
                 </p>
             </div>
         </div>
 
-        <!-- Card 3: Ecografías -->
+        <!-- Card 3: Perfil Rodilla -->
         <div class="card">
-            <img class="card-img-top" src="../resources/images/JustAnotherHospital-Ecografia.png" alt="Card image cap">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-.png" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Ecografías</h5>
+                <h5 class="card-title">Radiografia de Rodilla</h5>
                 <hr>
                 <p class="card-text">
-                    <a id="btnEcografia" class="btn btn-secondary">Ver estudios de <b>Ecografías</b></a>
+                    <a id="btnEcografia" href="estudio/radiografia-rodilla" class="btn btn-secondary">Sacar turno para <b>Radiografía de Rodilla</b></a>
                 </p>
             </div>
         </div>
 
-        <!-- Card 4: EcoDoppler -->
+        <!-- Card 4: Radiografía Pie -->
         <div class="card">
-            <img class="card-img-top" src="../resources/images/JustAnotherHospital-Ecodoppler.png" alt="Card image cap">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-.png" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">EcoDoppler</h5>
+                <h5 class="card-title">Radiografia de Pie</h5>
                 <hr>
                 <p class="card-text">
-                    <a id="btnEcodoppler" class="btn btn-secondary">Ver estudios de <b>EcoDoppler</b></a>
+                    <a id="btnEcodoppler" href="estudio/radiografia-pie" class="btn btn-secondary">Sacar turno para  <b>Radiografía de Pie</b></a>
                 </p>
             </div>
         </div>
 
-        <!-- Card 5: Tomografía -->
+        <!-- Card 5: Radiografia Hombro -->
         <div class="card">
-            <img class="card-img-top" src="../resources/images/JustAnotherHospital-Tomografia.png" alt="Card image cap">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-.png" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Tomografía</h5>
+                <h5 class="card-title">Radiografia de Hombro</h5>
                 <hr>
                 <p class="card-text">
-                    <a id="btnTomografia" class="btn btn-secondary">Ver estudios de <b>Tomografía</b></a>
+                    <a id="btnTomografia" href="estudio/radiografia-hombro" class="btn btn-secondary">Sacar turno para <b>Radiografia de Pie</b></a>
                 </p>
             </div>
         </div>
 
-        <!-- Card 6: Electro -->
+        <!-- Card 6: Radiografia Dental -->
         <div class="card">
-            <img class="card-img-top" src="../resources/images/JustAnotherHospital-Electro.png" alt="Card image cap">
+            <img class="card-img-top" src="../../resources/images/img-estudios/JustAnotherHospital-.png" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Electrocardiograma / Electroencefalograma</h5>
+                <h5 class="card-title">Radiografia Dental</h5>
                 <hr>
                 <p class="card-text">
-                    <a id="btnElectro" class="btn btn-secondary">Ver estudios de <b>Electrocardiograma / Electroencefalograma</b></a>
+                    <a id="btnElectro" href="estudio/radiografia-dental" class="btn btn-secondary">Sacar turno para <b>Radiografia Dental</b></a>
                 </p>
             </div>
         </div>
